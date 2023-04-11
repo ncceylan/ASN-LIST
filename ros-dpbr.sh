@@ -3,7 +3,7 @@ mkdir -p ./pbr
 cd ./pbr
 
 # AS4809 BGP
-wget --no-check-certificate -c -O CN.txt https://raw.githubusercontent.com/ncceylan/asn_china/main/asn_cn.conf
+wget --no-check-certificate -c -O CN.txt https://raw.githubusercontent.com/ncceylan/China-ASN/main/asn_cn.conf
 
 {
 echo "/routing filter num-list"
