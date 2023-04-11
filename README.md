@@ -9,7 +9,6 @@
 策略路由分流的实现方法：
 
 **CN.rsc** 是往routing filter num-list 里生ASN段列表。
-
 ```
 /file remove [find name="CN.rsc"]
 /tool fetch url="https://cdn.jsdelivr.net/gh/ncceylan/chnroute@main/CN.rsc"
@@ -20,8 +19,6 @@
 ```
 
 **CMCC.rsc** 是往routing filter num-list 里生ASN段列表。
-
-
 ```
 /file remove [find name="CMCC.rsc"]
 /tool fetch url="https://cdn.jsdelivr.net/gh/ncceylan/chnroute@main/CMCC.rsc"
@@ -32,9 +29,6 @@
 ```
 
 **CT.rsc** 是往routing filter num-list 里生ASN段列表。
-
-
-```
 /file remove [find name="CT.rsc"]
 /tool fetch url="https://cdn.jsdelivr.net/gh/ncceylan/ASN-LIST@main/CT.rsc"
 :if ([:len [/file find name=CT.rsc]] > 0) do={
