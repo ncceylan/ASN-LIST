@@ -29,6 +29,7 @@
 ```
 
 **CT.rsc** 是往routing filter num-list 里生ASN段列表。
+```
 /file remove [find name="CT.rsc"]
 /tool fetch url="https://cdn.jsdelivr.net/gh/ncceylan/ASN-LIST@main/CT.rsc"
 :if ([:len [/file find name=CT.rsc]] > 0) do={
@@ -37,14 +38,5 @@
 }
 ```
 
-用于routing filter num-list引用
-
-/file remove [find name="CN.rsc"]
-/tool fetch url="https://github.com/ncceylan/chnroute/blob/main/CN.rsc"
-:if ([:len [/file find name=CN.rsc]] > 0) do={
-/ip firewall address-list remove [find comment="AS4809"]
-/import CN.rsc
-}
-```
 
 用于Firewall - mangle页，通过dst-addrss= 引用
