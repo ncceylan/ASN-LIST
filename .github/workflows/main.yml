@@ -1,6 +1,7 @@
 name: Build PBR
 
 on:
+  push:
   schedule:
     - cron: "2 0/1 * * *"
   workflow_dispatch:
