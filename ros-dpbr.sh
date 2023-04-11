@@ -9,7 +9,7 @@ wget --no-check-certificate -c -O CN.txt https://raw.githubusercontent.com/nccey
 echo "/routing filter num-list"
 
 for net in $(cat CN.txt) ; do
-  echo "add list=CN range=$net comment=AS4809"
+  echo "add list=CN range=$net"
 done
 
 } > ../CN.rsc
@@ -21,7 +21,7 @@ wget --no-check-certificate -c -O CMCC.txt https://raw.githubusercontent.com/ncc
 echo "/routing filter num-list"
 
 for net in $(cat CMCC.txt) ; do
-  echo "add list=CMCC range=$net comment=AS9808"
+  echo "add list=CMCC range=$net"
 done
 
 } > ../CMCC.rsc
@@ -33,7 +33,7 @@ wget --no-check-certificate -c -O CT.txt https://raw.githubusercontent.com/nccey
 echo "/routing filter num-list"
 
 for net in $(cat CT.txt) ; do
-  echo "add list=CT range=$net comment=AS4811"
+  echo "add list=CT range=$net"
 done
 
 } > ../CT.rsc
