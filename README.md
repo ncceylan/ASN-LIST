@@ -13,7 +13,7 @@
 /file remove [find name="CN.rsc"]
 /tool fetch url="https://cdn.jsdelivr.net/gh/ncceylan/chnroute@main/CN.rsc"
 :if ([:len [/file find name=CN.rsc]] > 0) do={
-/routing filter num-list remove [find comment="AS4809"]
+/routing filter num-list remove [find list="CN"]
 /import CN.rsc
 }
 ```
@@ -23,7 +23,7 @@
 /file remove [find name="CMCC.rsc"]
 /tool fetch url="https://cdn.jsdelivr.net/gh/ncceylan/chnroute@main/CMCC.rsc"
 :if ([:len [/file find name=CMCC.rsc]] > 0) do={
-/routing filter num-list remove [find comment="AS9808"]
+/routing filter num-list remove [find list="CMCC"]
 /import CMCC.rsc
 }
 ```
@@ -33,7 +33,7 @@
 /file remove [find name="CT.rsc"]
 /tool fetch url="https://cdn.jsdelivr.net/gh/ncceylan/ASN-LIST@main/CT.rsc"
 :if ([:len [/file find name=CT.rsc]] > 0) do={
-/routing filter num-list remove [find comment="AS4811"]
+/routing filter num-list remove [find list="CT"]
 /import CT.rsc
 }
 ```
