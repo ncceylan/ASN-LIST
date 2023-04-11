@@ -27,7 +27,7 @@ done
 } > ../CMCC.rsc
 
 # AS4809 BGP
-wget --no-check-certificate -c -O CT.txt https://raw.githubusercontent.com/ncceylan/asn_china/main/asn_ct.conf
+wget --no-check-certificate -c -O CT.txt https://raw.githubusercontent.com/ncceylan/China-ASN/main/asn_ct.conf
 
 {
 echo "/routing filter num-list"
