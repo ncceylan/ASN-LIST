@@ -26,4 +26,3 @@ add list=CMCC range=138407
 add list=CMCC range=139080
 add list=CMCC range=140105
 add list=CMCC range=140895
-add list=CMCC range=141425
