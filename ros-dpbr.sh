@@ -7,21 +7,25 @@ download_and_create_filter() {
     local url="$3"
     local output_file="$4"
 
+    echo "Downloading ${file_name}..."
     wget --no-check-certificate -c -O "$file_name" "$url"
 
     {
         echo "/routing filter num-list"
 
-        for net in $(cat "$file_name") ; do
+        while read -r net; do
             echo "add list=$list_name range=$net"
-        done
+        done < "$file_name"
 
     } > "$output_file"
+
+    echo "${file_name} processing completed."
 }
 
 # 主程序
-mkdir -p ./pbr
-cd ./pbr
+output_directory="./pbr"
+mkdir -p "${output_directory}"
+cd "${output_directory}" || exit 1
 
 # AS4809 BGP
 download_and_create_filter "CN.txt" "CN" "https://raw.githubusercontent.com/ncceylan/China-ASN/main/asn_cn.conf" "../CN.rsc"
@@ -33,4 +37,4 @@ download_and_create_filter "CMCC.txt" "CMCC" "https://raw.githubusercontent.com/
 download_and_create_filter "CT.txt" "CT" "https://raw.githubusercontent.com/ncceylan/China-ASN/main/asn_ct.conf" "../CT.rsc"
 
 cd ..
-rm -rf ./pbr
+rm -rf "${output_directory}"
