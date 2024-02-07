@@ -41,4 +41,3 @@ add list=CMCC range=149967
 add list=CMCC range=209141
 add list=CMCC range=268862
 add list=CMCC range=272151
-add list=CMCC range=328787
